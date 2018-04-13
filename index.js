@@ -1,22 +1,14 @@
 const {Builder, By} = require('selenium-webdriver');
 
-let browser;
-
-/**
- * Purpose of this test:
- * Check if IE breaks with rapidly reloading Google
- * RESULT: breaks
- */
 (async function example() {
-	browser = await new Builder()
+	let browser = await new Builder()
 		.forBrowser('internet explorer')
 		.build();
 	let startTime = new Date().getTime();
-	let currentTime;
 	let numLoops = 0;
 
 	while(true) {
-		currentTime = new Date().getTime();
+		let currentTime = new Date().getTime();
 		numLoops++;
 		process.stdout.write(`\rReloads: ${numLoops}, elapsed time: ${getElapsedTimeString(startTime, currentTime)}        `);
 		await browser.get('https://google.com');
