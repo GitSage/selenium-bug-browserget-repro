@@ -1,0 +1,22 @@
+{
+  "name": "selenium-bug-browserget-repro",
+  "version": "1.0.0",
+  "description": "Reproduction for an Internet Explorer bug that happens when repeatedly loading a page and interacting with elements on the page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "selenium",
+    "webdriver",
+    "bug",
+    "internet",
+    "explorer",
+    "internetexplorerdriver"
+  ],
+  "author": "Ben Yocum",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}
